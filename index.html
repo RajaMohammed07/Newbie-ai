@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Recipe Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1>Raja AI</h1>
+                <p>Input three ingredients, and our intelligent chef will craft a unique recipe just for you.</p>
+            </div>
+
+            <div class="input-group">
+                <div class="ingredient-inputs">
+                    <div class="input-wrapper">
+                        <span>🥬</span>
+                        <input type="text" id="ing1" placeholder="Ingredient 1" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>🥩</span>
+                        <input type="text" id="ing2" placeholder="Ingredient 2" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>🧂</span>
+                        <input type="text" id="ing3" placeholder="Ingredient 3" required>
+                    </div>
+                </div>
+                <button id="generateBtn" onclick="generateRecipe()">Generate Magic Recipe</button>
+            </div>
+
+            <div id="errorMessage" class="error-message"></div>
+
+            <div class="loader" id="loader">
+                <div class="spinner"></div>
+                <p style="margin-top: 1.5rem; color: #666; font-weight: 500;">Whisking ingredients together...</p>
+            </div>
+
+            <div class="result-container" id="resultContainer">
+                <div class="recipe-content" id="recipeContent">
+                    <!-- AI Generated Content Will Appear Here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load our logic script -->
+    <script src="script.js"></script>
+</body>
+</html>
