@@ -1,5 +1,5 @@
 // API settings based on your exact requirement
-const API_KEY = "AIzaSyDxDroEBG_jEAdJlHqzEyTj6RLUJWQcxak";
+const API_KEY = "AIzaSyDX0Bl1xKm-4RUG0JVLBPEweKauslr8kyo";
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
 
 async function generateRecipe() {
