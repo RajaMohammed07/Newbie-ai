@@ -1,55 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Recipe Generator</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newbie AI Recipe Generator</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- DOMPurify for safe HTML rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.8/dist/purify.min.js"></script>
 </head>
 <body>
 
     <div class="container">
+
         <div class="card">
+
             <div class="header">
-                <h1>Newbie AI</h1>
-                <p>Input three ingredients, and our intelligent chef will craft a unique recipe just for you.</p>
+                <h1>🍳 Newbie AI</h1>
+
+                <p>
+                    Enter three ingredients and let AI create a delicious recipe instantly.
+                </p>
             </div>
 
-            <div class="input-group">
-                <div class="ingredient-inputs">
-                    <div class="input-wrapper">
-                        <span>🥬</span>
-                        <input type="text" id="ing1" placeholder="Ingredient 1" required>
-                    </div>
-                    <div class="input-wrapper">
-                        <span>🥩</span>
-                        <input type="text" id="ing2" placeholder="Ingredient 2" required>
-                    </div>
-                    <div class="input-wrapper">
-                        <span>🧂</span>
-                        <input type="text" id="ing3" placeholder="Ingredient 3" required>
-                    </div>
+            <div class="ingredient-inputs">
+
+                <div class="input-wrapper">
+                    <span>🥬</span>
+                    <input type="text" id="ing1" placeholder="Ingredient 1" />
                 </div>
-                <button id="generateBtn" onclick="generateRecipe()">Generate Magic Recipe</button>
+
+                <div class="input-wrapper">
+                    <span>🥩</span>
+                    <input type="text" id="ing2" placeholder="Ingredient 2" />
+                </div>
+
+                <div class="input-wrapper">
+                    <span>🧂</span>
+                    <input type="text" id="ing3" placeholder="Ingredient 3" />
+                </div>
+
             </div>
+
+            <button id="generateBtn">
+                Generate Recipe
+            </button>
 
             <div id="errorMessage" class="error-message"></div>
 
             <div class="loader" id="loader">
                 <div class="spinner"></div>
-                <p style="margin-top: 1.5rem; color: #666; font-weight: 500;">Whisking ingredients together...</p>
+                <p>Cooking your AI recipe...</p>
             </div>
 
-            <div class="result-container" id="resultContainer">
-                <div class="recipe-content" id="recipeContent">
-                    <!-- AI Generated Content Will Appear Here -->
-                </div>
+            <div id="resultContainer" class="result-container">
+
+                <div id="recipeContent" class="recipe-content"></div>
+
             </div>
+
         </div>
+
     </div>
 
-    <!-- Load our logic script -->
     <script src="script.js"></script>
+
 </body>
 </html>
